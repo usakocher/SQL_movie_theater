@@ -18,4 +18,13 @@ for that movie, it could also not appear in the ticket table at all. Therefore t
 ## Lessons Learned
 In checking that my tables and information rendered, I realized that most of my tables contained id's from other tables, and have no other means of identification. Now
 I don't believe this to be too much of a problem as it's the relationships of the tables that are important, but colleagues, or even myself, can have problems truly
-understanding the data in the tables. It can also make information harder to query as it would just return id's with no other information.
+understanding the data in the tables. It can also make information harder to query as it would just return id's with no other information.<br>
+
+One of the hardships I had was trying to create a single table for transactions. But concession items and tickets would contain totally different information and so would
+end up requiring different transaction tables.
+
+## Questions Developed
+In order render the tables the way I had designed, I discovered two problems. One was showtimes. We went over how to do a timestamp but I needed to create a set time. With
+enough googling I discovered the solution. The other issue I had was that I needed a boolean value for the showtime column of matinee; True if showtime was a matinee, False
+if it was not. I went through several different potential solutions, including making that value binary: 1 for True, 0 for False. Finally, buring within the depths of Mordor,
+I discovered that postgresSQL actually contained boolean values. So after much researching, I determined that my solution was pretty easy.
