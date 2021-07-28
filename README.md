@@ -26,5 +26,5 @@ end up requiring different transaction tables.
 ## Questions Developed
 In order to render the tables the way I had designed, I discovered two problems. One was showtimes. We went over how to do a timestamp but I needed to create a set time. With
 enough googling I discovered the solution. The other issue I had was that I needed a boolean value for the showtime column of matinee; True if showtime was a matinee, False
-if it was not. I went through several different potential solutions, including making that value binary: 1 for True, 0 for False. Finally, buring within the depths of Mordor,
-I discovered that postgresSQL actually contained boolean values. So after much researching, I determined that my solution was pretty easy.
+if it was not. I went through several different potential solutions, including making that value binary: 1 for True, 0 for False. Finally, buried within the depths of Mordor
+itself, I discovered that postgresSQL actually contained boolean values. So after much researching, I determined that my solution was pretty easy.
